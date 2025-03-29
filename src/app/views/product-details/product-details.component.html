@@ -1,0 +1,39 @@
+<div class="container mt-4">
+    <mat-card class="p-3">
+      <div class="row">
+        
+        <div class="col-md-7">
+          <h2 class="mb-3">{{ producto.nombre }}</h2>
+          
+          <div class="product-details">
+            <div class="detail-item">
+              <span class="detail-label">ID:</span>
+              <span class="detail-value">{{ producto.id }}</span>
+            </div>
+            
+            <div class="detail-item">
+              <span class="detail-label">Precio:</span>
+              <span class="detail-value price">{{ producto.precio | currency:'MXN':'symbol':'1.2-2' }}</span>
+            </div>
+            
+            <div class="detail-item">
+              <span class="detail-label">Descripción:</span>
+              <p class="detail-value">{{ producto.descripcion }}</p>
+            </div>
+          </div>
+          
+          <div class="mt-4 d-flex gap-2">
+            <button mat-raised-button color="primary" (click)="agregarAlCarrito()">
+              <mat-icon>add_shopping_cart</mat-icon>
+              Agregar al carrito
+            </button>
+            
+            <button mat-stroked-button color="accent" routerLink="/products">
+              <mat-icon>arrow_back</mat-icon>
+              Volver a productos
+            </button>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
